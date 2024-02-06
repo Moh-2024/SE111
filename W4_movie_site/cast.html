@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name = "author" content="Mohammed Malek">
+    <meta name  ="description" content="w4 Demo">
+
+    <title>w4 | Demo</title>
+
+    <!--in-document styling-->
+    <style>
+         #content{
+            font-size: large;
+            display: flex;
+        }
+
+        li {
+            float: left;
+        }
+
+         a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        color: black;
+        
+        }
+
+        a:hover {
+        background-color: #111;
+        color:white;
+        }
+                /* Create two equal columns that sits next to each other */
+        .character {
+        flex: 50%;
+        padding: 10px;
+        height: 300px; /* Should be removed. Only for demonstration */
+        }
+
+    </style>
+</head>
+<body>
+    <!--wrapper / container holds all content-->
+    <div id = "container">
+        <hr>
+        <!--HEADER-->
+        <div id = "header">
+            <h1><em>Avengers: Infinity War</em></h1>
+
+        </div><!--/#header-->
+        
+        <!--NAV-->
+        <div id = "nav">
+            <!--internal page links: RELATIVE PATHS-->
+            <a href="index.html">HOME</a>
+            <a href="cast.html">CAST</a>
+            <a href="review.html">REVIEW</a>
+
+        </div><!--/#content-->
+
+
+        <hr>
+        <h2><u>CAST </u>of the movie <em>Avengers: Infinity War</em>(2018)</h2>
+        <!--PAGECONTENT-->
+        <div id = "content">
+            <!--reusable container for EACH character-->
+            <div class="character">
+                <h3>Robert Downey Jr.</h3>
+                <img src="images/rdj.png" alt = "Robert Downey Jr head shot" height="50">
+
+                <p>Tony Stark</p>
+
+            </div>
+            <div class="character">
+                <h3>Chris Hemsworth</h3>
+                <img src="images/chrishemsworth.png" alt="Chris Hemsworth head shot" height="50">
+
+                <p>Thor</p>
+                
+            </div>
+            <div class="character">
+                <h3>Mark Ruffalo</h3>
+                <img src="images/Markruffalo.png" alt="Mark Ruffalo head shot" height="50">
+
+                <p>Bruce Banner/Hulk</p>
+                
+            </div>
+            <div class="character">
+                <h3>Chris Evans</h3>
+                <img src="images/Chrisevans.png" alt="Chris Evans head shot" height="50">
+
+                <p>Steve Rogers/ Captain America</p>
+                
+            </div>
+            <div class="character">
+                <h3>Scarlett Johansson</h3>
+                <img src="images/ScarlettJohansson.png" alt="Scarlett Johansson head shot" height="50">
+
+                <p>Natasha Romanoff</p>
+                
+            </div>
+            <div class="character">
+                <h3>Don Cheadle</h3>
+                <img src="images/DonCheadle.png" alt="Don Cheadle head shot" height="50">
+
+                <p>James Rhodes</p>
+                
+            </div>
+            <div class="character">
+                <h3>Benedict Cumberbatch</h3>
+                <img src="images/BenedictCumberbatch.png" alt="benedict Cumberbatch head shot" height="50">
+
+                <p>Dr Strange</p>
+                
+            </div>
+            <div class="character">
+                <h3>Tom Holland</h3>
+                <img src="images/TomHolland.png" alt="Tom Holland head shot" height="50">
+
+                <p>Peter Parker</p>
+                
+            </div>
+            <div class="character">
+                <h3>Chadwick Boseman</h3>
+                <img src="images/ChadwickBoseman.png" alt="Chadwick Boseman head shot" height="50">
+
+                <p>T'Challa</p>
+                
+            </div>
+            <div class="character">
+                <h3>Zoe Saldana</h3>
+                <img src="images/ZoeSaldana.png" alt="Zoe Saldana head shot" height="50">
+
+                <p>Gamora</p>
+                
+            </div>
+            <div class="character">
+                <h3>Karen Gillan</h3>
+                <img src="images/KarenGillan.png" alt="Karen GIllan head shot" height="50">
+
+                <p>Nebula</p>
+                
+            </div>
+            <div class="character">
+                <h3>Tom Hiddleston</h3>
+                <img src="images/TomHiddleston.png" alt="Tom Hiddleston head shot" height="50">
+
+                <p>Loki</p>
+                
+            </div>
+            <div class="character">
+                <h3>Paul Bettany</h3>
+                <img src="images/PaulBettany.png" alt="Paul Bettany head shot" height="50">
+
+                <p>Vision</p>
+                
+            </div>
+            <div class="character">
+                <h3>Elizabeth Olsen</h3>
+                <img src="images/ElizabethOlsen.png" alt="Elizabeth Olsen head shot" height="50">
+
+                <p>Wanda Maximoff</p>
+                
+            </div>
+            <div class="character">
+                <h3>Anthony Mackie</h3>
+                <img src="images/AnthonyMackie.png" alt="Anthony Mackie head shot" height="50">
+
+                <p>Sam Wilson</p>
+                
+            </div>
+            <div class="character">
+                <h3>Sebastian Stan</h3>
+                <img src="images/SebastianStan.png" alt="Sebastian Stan head shot" height="50">
+
+                <p>Bucky Barnes</p>
+                
+            </div>
+        
+
+        
+            
+
+        </div><!--/#content-->
+
+        <hr>
+        <!--FOOTER-->
+        <div id = "footer">
+            <!--in page jump link to top-->
+            <a href="#header">BACK TO TOP!</a>
+            <p>&copy; M Mohammed | SE111| 202420</p>
+
+            <!--IMAGE OF VALIDATION - for EACH page!-->
+            
+                <img src="images/cast.png" alt="validation of INDEX page"
+                style="width:50%"
+            
+
+        </div> <!--/#footer-->
+    </div><!--/ #container-->
+    
+</body>
+</html>
