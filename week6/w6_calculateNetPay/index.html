@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Mohammed Malek">
+    <meta name="description" content="w6 - Pay Calculator">
+
+    <title>W6 | JavaScript Pay Calculator</title>
+    <style>
+        body{
+            background-color: beige;
+        }
+    </style>
+</head>
+<body>
+    <h1>W6 Pay Calculator</h1>
+    <script>
+
+        // initializing weeks and tax
+        var weeks = 2
+        var tax = .2
+
+        //prompting user to enter hourly rate and hours worked
+        var hourlyRate = Number(prompt(`Please enter your hourly rate: `))
+        var hoursWorked = Number(prompt(`Please enter hours worked in 2 weeks: `))
+
+        //calculating gross pay, tax amount and net pay
+        var grossPay = hourlyRate * hoursWorked * weeks
+        var taxAmount = grossPay * tax
+        var netPay =  grossPay - taxAmount
+
+        // sending alert of the results
+        alert(`Gross Pay: $${grossPay.toFixed(2)} \nTax Amount: $${taxAmount.toFixed(2)} \nNet Pay: $${netPay.toFixed(2)}`)
+        console.log(`Gross Pay: $${grossPay.toFixed(2)} \nTax Amount: $${taxAmount.toFixed(2)} \nNet Pay: $${netPay.toFixed(2)}`)
+
+    </script>
+    
+</body>
+</html>

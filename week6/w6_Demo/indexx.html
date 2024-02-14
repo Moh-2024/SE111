@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Mohammed Malek">
+    <meta name="description" content="w6 - Intro to JS Demo">
+
+    <title>W6 | Intro to JS</title>
+
+    <style>
+        body{
+            background-color: grey;
+        }
+    </style>
+</head>
+<body>
+    <!--best practice to have some kind of HTML in your <body> -->
+    <h1>W6 | Intro to JavaScript Demo</h1>
+
+
+    <!--use <script> AFTER content, @ end of <body> but before close-->
+    <script>
+        // javascript code here
+        // single like comment
+
+        /*
+        multi line comments
+        */
+
+        // we must DECLARE variables before we can define or use them
+        var name // declaration
+        name = "Mohammed" // definition - assigning data to the name
+
+        //combine the instruction
+        var newName = "Mohammed"
+
+        var num1 = 10
+        var num2 = 7
+        var sum = num1 + num2
+
+        // alert() -> creates a pop-up; user must interact with (press OK) beofre next lines of script are read
+        alert(`${sum} = ${num2} + ${num2}`)
+        console.log(`${sum} = ${num2} + ${num2}`)
+
+        // OUTPUT-------
+        //console.log -> for TESTING/DEVELOPMENT/DEBUGGING - not for the user
+        console.log(name) // 1 stored value
+        console.log(name, newName) // 2 stored values
+
+        //LITERAL STRINGS use `` and allow for stored value inclusion
+        console.log(`1st NAME : ${name} \n2nd NAME: ${newName}`) //message + stored
+
+        //INPUT ---------------------
+        //prompt() -> creates a pop-u window which includes a text field for user to enter data
+        //user must click OK before prompt() will close /  any new lines are processed
+
+       var last =  prompt(`HI ${name} | Enter your last name: `)
+        console.log('passed the prompt')
+        console.log(`Last Name: ${last}`)
+
+        //gaining Numbers form the user - cast as a Number!
+        var num  = prompt(`Enter a number: `)
+        var multi = num * 10
+        console.log(multi)   // looks like  a number
+        console.log(multi.toFixed(2)) // but is it a number?
+    </script>
+    
+</body>
+</html>
