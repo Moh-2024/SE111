@@ -7,7 +7,7 @@
 
     <!--FILL OUT THE MISSING INFO-->
     <meta name="author" content="Mohammed Malek">
-    <meta name="description" content="">
+    <meta name="description" content="Gross pay calculator">
 
     <title>W7 | JS Pay Form</title>
 </head>
@@ -114,24 +114,34 @@
             console.log() all of these elements once complete
 
         */
-       var body =  document.querySelector(`body`)
-       var h1 = document.querySelector(`h1`)
-       var input = document.getElementById(`confirm-button`)
-       var div = document.getElementById(`info`)
-       console.log(body)
-       console.log(h1)
-       console.log(input)
-       console.log(div)
+        var body = document.querySelector(`body`) 
+        var h1 = document.getElementById(`h1`)
+
+        // Store input element values to descriptive names
+        var firstName = document.getElementById("first")
+        var lastName = document.getElementById("last")
+        var rate = document.getElementById("rate")
+        var hours = document.getElementById("hours")
+
+        var inputOne = document.getElementById(`enter-button`)
+        var inputTwo = document.getElementById(`confirm-button`)
+        var info = document.getElementById(`info`)
+
+        console.log(body)
+        console.log(h1)
+        console.log(inputOne)
+        console.log(inputTwo)
+        console.log(info)
+
 
         //PART2------adding event listeners------------------------
-        
-            //add an event listener to the #enter-button that runs a function called "formData"
-            document.querySelector(`#enter-button`).addEventListener(`click`, formData)
+        /*
+            add an event listener to the #enter-button that runs a function called "formData"
 
-            //add an event listener to the #confirm-button that runs a function called "confirmForm"
-            document.querySelector(`#confirm-button`).addEventListener(`click`, confirmData)
-        
-
+            add an event listener to the #confirm-button that runs a function called "confirmForm"
+        */
+        document.querySelector(`#enter-button`).addEventListener(`click`, formData)
+        document.querySelector(`#confirm-button`).addEventListener(`click`, confirmData)
 
         //PART3------building event functions----------------------
         /*
@@ -146,29 +156,9 @@
                     HINT EX: `<p><b>Full Name:</b> ${fullName}`
 
                 REMEMBER: form text field data is treated as a STRING so you will most likely need the Number() 
-            */    
-                function formData(event){
 
-                    // initializing weeks and tax
-                    var weeks = 2
-                    var tax = .2
 
-                    var firstName = document.getElementById(`first`)
-                    var lastName = document.getElementById(`last`)
-                    var fullName = firstName += lastName
-                    var hourlyRate = doucment.getElementById(`rate`)
-                    var hoursWorked = doucment.getElementById(`hours`)
-
-                    console.log(fullName)
-                    console.log(hourlyRate)
-                    console.log(hoursWorked)
-
-                    var grossPay = hourlyRate * hoursWorked * weeks
-                    var taxAmount = grossPay * tax
-                    var netPay =  grossPay - taxAmount
-                }
-
-           /* confirmForm() instructions:
+            confirmForm() instructions:
                 -store the input element values to descriptive names
                 -declare and create a "fullName" using the first and last values
                 -declare and create: grossPay, taxAmount, netPay
@@ -177,18 +167,71 @@
                 
 
         */
+
        function formData(event)
        {
             //EXTRA CREDIT---------+5pts-------------------------------
             /*
                 Once your file is working, add ONE INSTRUCTION above this comment, but inside of the formData(), that makes sure if the user resubmits the form without reloading the page, only the new form info is displayed
             */
+            info.innerHTML = ` `
+
+            var fvalue = firstName.value    //local declaration
+            var lvalue = lastName.value 
+            var hoursWorked = Number(hours.value)
+            var hourlyRate = Number(rate.value)
+             
+
+            //create a full name using fvalue and lvalue 
+            var full = fvalue + ` ` + lvalue
+
+
+            // initializing weeks and tax
+            var weeks = 2
+            var tax = .2
+
+            //calculating gross pay, tax amount and net pay
+            var grossPay = Number(hourlyRate * hoursWorked * weeks)
+            var taxAmount = Number(grossPay * tax)
+            var netPay =  Number(grossPay - taxAmount)
+
+            console.log(`Full Name: ${full}`)
+            console.log(`Gross Pay: ${grossPay.toFixed(2)}`)
+            console.log(`Tax Amount: ${taxAmount.toFixed(2)}`)
+            console.log(`Net Pay: ${netPay.toFixed(2)}`)
+
+            info.innerHTML += `<p><b>Full Name:</b> ${full}</p>`
+            info.innerHTML +=`<p><b>Gross Pay:</b> $${grossPay.toFixed(2)}</p>` 
+            info.innerHTML +=`<p><b>Tax Amount:</b> $${taxAmount.toFixed(2)}</p>`
+            info.innerHTML +=`<p><b>Net Pay:</b> $${netPay.toFixed(2)}</p>`
 
        }//formData()
 
 
        function confirmData(event)
        {
+        info.innerHTML = ` `
+
+        var fvalue = firstName.value    //local declaration
+        var lvalue = lastName.value 
+        var hoursWorked = Number(hours.value)
+        var hourlyRate = Number(rate.value)
+        
+
+        //create a full name using fvalue and lvalue 
+        var full = fvalue + ` ` + lvalue
+
+
+        // initializing weeks and tax
+        var weeks = 2
+        var tax = .2
+
+        //calculating gross pay, tax amount and net pay
+        var grossPay = Number(hourlyRate * hoursWorked * weeks)
+        var taxAmount = Number(grossPay * tax)
+        var netPay =  Number(grossPay - taxAmount)
+
+        alert(`Gross Pay: $${grossPay.toFixed(2)} \nTax Amount: $${taxAmount.toFixed(2)} \nNet Pay: $${netPay.toFixed(2)}`)
 
        }//confirmData()
 
